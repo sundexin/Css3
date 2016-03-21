@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 "Courier New", Courier, "微软雅黑", "宋体", sans-serif;
+  padding: 30px;
+}
+.box {
+  list-style: none;
+  padding: 10px;
+  border: 5px solid #960;
+  width: 400px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.box div {
+  width: 80px;
+  height: 80px;
+  background: #939;
+  margin: 10px;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+}
+.box .div1 {
+  order: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  flex: auto;
+  align-self: auto;
+}
+.demo_box {
+  border: 1px solid #3da5dc;
+  background: #a4dcf9;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+}
+.demo_rotate {
+  transition: all ease-in 1s;
+}
+.demo_rotate:hover {
+  transform: rotate(360deg) scale(1.5);
+}
+.translate {
+  transition: all ease 1s;
+}
+.translate:hover {
+  transform: translate(100px) skew(-45deg);
+}
+.transition {
+  transition: background 0.5s ease-in;
+}
+.transition:hover {
+  background: #f00;
+}
+.loader {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+.loading {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -10px;
+}
+.loading i {
+  display: inline-block;
+  width: 4px;
+  height: 35px;
+  border-radius: 2px;
+  margin: 0 2px;
+  background-color: #0bac84;
+}
+.loading i:hover {
+  animation-play-state: paused;
+}
+.loading i:nth-child(1) {
+  animation-name: animationName;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+}
+.loading i:nth-child(2) {
+  animation: animationName 1s ease-in 0.3s infinite alternate;
+}
+.loading i:nth-child(3) {
+  animation: animationName 1s ease-in 0.5s infinite alternate;
+}
+.loading i:nth-child(4) {
+  animation: animationName 1s ease-in 0.7s infinite alternate;
+}
+.loading i:nth-child(5) {
+  animation: animationName 1s ease-in 0.9s infinite alternate;
+}
+@-moz-keyframes animationName {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes animationName {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@-o-keyframes animationName {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes animationName {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+/*# sourceMappingURL=index.css.map */

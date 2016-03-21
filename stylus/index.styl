@@ -1,0 +1,113 @@
+  *
+    margin 0
+    padding 0
+  body
+    font 12px/1.5 "Courier New", Courier, "微软雅黑", "宋体", sans-serif
+    padding 30px
+  .box
+    list-style none
+    padding 10px
+    border 5px solid #960
+    width 400px
+    display flex
+    // flex-direction row
+    // flex-flow wrap
+    flex-flow row wrap
+    justify-content flex-start
+    align-items center
+    // align-conten center
+    div
+      width 80px
+      height 80px
+      background #939
+      margin 10px
+      text-align center
+      line-height 80px
+      color #fff
+    .div1
+      order 1
+      flex-grow 1
+      flex-shrink 1
+      flex-basis auto
+      flex auto
+      // flex none
+      align-self auto
+
+  .demo_box
+    border 1px solid #3DA5DC
+    background #a4dcf9
+    height 100px
+    width 200px
+    text-align center
+    color #fff
+    font-style italic
+
+  //transform
+  .demo_rotate
+    transition all ease-in 1s
+  .demo_rotate:hover
+    transform rotate(720deg) scale(1.5)
+  //translate
+  .translate
+    transition all ease 1s
+  .translate:hover
+    transform translate(100px) skew(-45deg)  //如果添加 translateY 就是向下100像素  translateX 这里的X可以省略
+  //transition
+  .transition
+    // transition-property background  要改变的属性
+    // transition-duration 5s          时间
+    // transition-timing-function ease-in   效果
+    // transition-delay 5s  延时
+    // 上面是单独写法，其实在上面的例子上都已经用到了
+    transition background 0.5s ease-in
+  .transition:hover  //能用但不仅仅是hover,鼠标单击、获得焦点、被点击或对元素任何改变中触发
+    background #f00
+
+  //animation
+  .loader
+    width 300px
+    height 200px
+    border 1px solid #ccc
+    margin 0 auto
+  .loading
+    position relative
+    top 50%
+    left 50%
+    margin-left -20px
+    margin-top -10px
+    i
+      display inline-block
+      width 4px
+      height 35px
+      border-radius 2px
+      margin 0 2px
+      background-color #0bac84
+      &:hover
+        animation-play-state paused
+      &:nth-child(1)
+        // animation animationName 1s ease-in .1s infinite
+        animation-name animationName //动画名称
+        animation-duration 1s        //动画时间
+        animation-timing-function ease-in  //动画播放方式
+        animation-delay .1s        //动画延时
+        animation-iteration-count infinite //动画播放次数
+        animation-direction alternate      //动画方向
+        animation-fill-mode none         //结束后状态  none , forwards, backwards, both
+
+      &:nth-child(2)
+        animation animationName 1s ease-in .3s infinite alternate
+      &:nth-child(3)
+        animation animationName 1s ease-in .5s infinite alternate
+      &:nth-child(4)
+        animation animationName 1s ease-in .7s infinite alternate
+      &:nth-child(5)
+        animation animationName 1s ease-in .9s infinite alternate
+
+
+    @keyframes animationName
+      0%
+        transform scaleY(1)
+      50%
+        transform scaleY(0.4)
+      100%
+        transform scaleY(1)
